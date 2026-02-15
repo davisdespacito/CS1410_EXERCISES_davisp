@@ -13,27 +13,43 @@ import java.math.BigDecimal;
  */
 public class TreasureChest {
 
+	/**
+	 * Number of gold coins.
+	 */
 	private int gold;
-	// TODO private static final BigDecimal GOLD_PER_COIN = ; must be initialized
+	
+	/**
+	 * Amount of gold per coin measured in ounces.
+	 */
+	private static final BigDecimal GOLD_PER_COIN = new BigDecimal(0.9675); 
 
 	/**
-	 * Amount of gold per coin measured in ounces
+	 * Price of an ounce of gold.
 	 */
 	private static BigDecimal goldPrice;
 
 	/**
+	 * Initializes a newly created TreasureChest with the specified number 
+	 * of gold coins.
 	 * 
 	 * @param gold
+	 * @throws IllegalArgumentException if <code>goldCoins</code> is negative.
 	 */
 	public TreasureChest(int goldCoins) {
-
+		if(goldCoins < 0) {
+			
+			throw new IllegalArgumentException("The number of gold coins in the treasure"
+					+ " chest can't be negative.");
+			
+		}
+		
 		this.gold = goldCoins;
 
 	}
 
 	/**
 	 * 
-	 * @return the gold
+	 * @return the amount of gold in this treasure chest.
 	 */
 	public int getGold() {
 
