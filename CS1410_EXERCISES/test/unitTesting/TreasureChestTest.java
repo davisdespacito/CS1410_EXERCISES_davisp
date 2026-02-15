@@ -8,10 +8,12 @@ import org.junit.jupiter.api.Test;
 class TreasureChestTest {
 
 	private TreasureChest treasure;
+	private TreasureChest emptyChest;
 	
 	@BeforeEach
 	void setUp() throws Exception {
 		treasure = new TreasureChest(10);
+		emptyChest = new TreasureChest(0);
 	}
 
 	@Test
@@ -42,9 +44,9 @@ class TreasureChestTest {
 		}
 	
 	@Test
-	void toString_PositiveNumberOfCoins_ReturnNumberCoinsInBracket() {
-		String expected = "[ 10 coins ]";
-		String actual = treasure.toString();
+	void toString_NoCoins_ReturnNumberCoinsInBracket() {
+		String expected = "[ 0 coins ]";
+		String actual = emptyChest.toString();
 		assertEquals(expected, actual);
 		}
 
