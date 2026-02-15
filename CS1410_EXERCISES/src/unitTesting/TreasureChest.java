@@ -58,8 +58,10 @@ public class TreasureChest {
 	}
 
 	/**
-	 * 
+	 * Adds the specified number of coins to this treasure chest.
+	 * <p>
 	 * @param numberOfCoins
+	 * @throws IllegalArgumentException if the <code>numberOfCoins</code> is negative.
 	 */
 	public void addGold(int numberOfCoins) {
 
