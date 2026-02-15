@@ -54,7 +54,7 @@ class TreasureChestTest {
 	}
 	
 	@Test
-	void restSetGoldPrice() {
+	void testSetGoldPrice() {
 		
 		fail("Not yet implemented");
 		
