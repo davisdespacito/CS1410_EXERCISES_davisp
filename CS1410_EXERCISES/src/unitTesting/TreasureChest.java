@@ -99,7 +99,7 @@ public class TreasureChest {
 	@Override
 	public String toString() {
 
-		return null; // TODO
+		return "[ " + gold + " coins ]";
 
 	}
 

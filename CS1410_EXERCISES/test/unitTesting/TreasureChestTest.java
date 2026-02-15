@@ -7,15 +7,17 @@ import org.junit.jupiter.api.Test;
 
 class TreasureChestTest {
 
+	private TreasureChest treasure;
+	
 	@BeforeEach
 	void setUp() throws Exception {
+		treasure = new TreasureChest(10);
 	}
 
 	@Test
 	void testTreasureChest() {
 		fail("Not yet implemented");
 	}
-
 
 	@Test
 	void testAddGold() {
@@ -27,7 +29,6 @@ class TreasureChestTest {
 		fail("Not yet implemented");
 	}
 
-
 	@Test
 	void testValueInDollars() {
 		fail("Not yet implemented");
@@ -35,7 +36,9 @@ class TreasureChestTest {
 
 	@Test
 	void testToString() {
-		fail("Not yet implemented");
-	}
+		String expected = "[ 10 coins ]";
+		String actual = treasure.toString();
+		assertEquals(expected, actual);
+		}
 
 }
