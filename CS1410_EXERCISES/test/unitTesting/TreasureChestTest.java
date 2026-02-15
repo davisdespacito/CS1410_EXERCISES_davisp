@@ -52,6 +52,13 @@ class TreasureChestTest {
 	void testValueInDollars() {
 		fail("Not yet implemented");
 	}
+	
+	@Test
+	void restSetGoldPrice() {
+		
+		fail("Not yet implemented");
+		
+	}
 
 	@Test
 	void toString_PositiveNumberOfCoins_ReturnNumberCoinsInBracket() {
