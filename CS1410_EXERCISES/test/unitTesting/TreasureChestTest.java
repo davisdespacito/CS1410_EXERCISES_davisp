@@ -16,10 +16,6 @@ class TreasureChestTest {
 		fail("Not yet implemented");
 	}
 
-	@Test
-	void testGetGold() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	void testAddGold() {
@@ -31,10 +27,6 @@ class TreasureChestTest {
 		fail("Not yet implemented");
 	}
 
-	@Test
-	void testGetGoldPrice() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	void testValueInDollars() {
