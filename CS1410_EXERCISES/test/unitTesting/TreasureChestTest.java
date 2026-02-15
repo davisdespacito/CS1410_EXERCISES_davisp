@@ -40,5 +40,12 @@ class TreasureChestTest {
 		String actual = treasure.toString();
 		assertEquals(expected, actual);
 		}
+	
+	@Test
+	void toString_PositiveNumberOfCoins_ReturnNumberCoinsInBracket() {
+		String expected = "[ 10 coins ]";
+		String actual = treasure.toString();
+		assertEquals(expected, actual);
+		}
 
 }
