@@ -12,11 +12,13 @@ class TreasureChestTest {
 
 	private TreasureChest treasure;
 	private TreasureChest emptyChest;
+	private final BigDecimal DELTA = new BigDecimal(0.000001);
 
 	@BeforeEach
 	void setUp() throws Exception {
 		treasure = new TreasureChest(10);
 		emptyChest = new TreasureChest(0);
+		TreasureChest.setGoldPrice(new BigDecimal(1426.90));
 	}
 
 	@Test
@@ -130,8 +132,19 @@ class TreasureChestTest {
 
 	
 	@Test
-	void testValueInDollars() {
-		fail("Not yet implemented");
+	void valueInDollars_FilledTreasureChest_ReturnsTotalAmountOfGoldMultipliedWithPrice() {
+		
+		BigDecimal difference = (new BigDecimal(13805.2575).subtract(treasure.valueInDollars()).abs());
+		assertTrue(!(difference.compareTo(DELTA) > 1));
+		
+	}
+	
+	@Test
+	void ValueIntoDollars_EmptyTreasureChest_Returns0() {
+		
+		BigDecimal difference = (BigDecimal.ZERO.subtract(emptyChest.valueInDollars()).abs());
+		assertTrue(!(difference.compareTo(DELTA) > 1));
+		
 	}
 	
 	@Test

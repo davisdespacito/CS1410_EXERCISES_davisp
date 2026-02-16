@@ -26,7 +26,7 @@ public class TreasureChest {
 	/**
 	 * Price of an ounce of gold.
 	 */
-	private static BigDecimal goldPrice;
+	private static BigDecimal goldPrice = new BigDecimal(1426.90); 
 
 	/**
 	 * Initializes a newly created TreasureChest with the specified number 
@@ -128,6 +128,11 @@ public class TreasureChest {
 	 */
 	public BigDecimal valueInDollars() {
 
+		System.err.println("gold: " + gold);
+		System.err.println("GOLD_PER_COIN: " + GOLD_PER_COIN);
+		System.err.println("goldPrice: " + goldPrice);
+		System.err.println();
+		
 		return new BigDecimal(gold).multiply(GOLD_PER_COIN).multiply(goldPrice);
 
 	}
