@@ -114,7 +114,10 @@ public class TreasureChest {
 	 */
 	public static void setGoldPrice(BigDecimal goldPrice) {
 		
+		if (goldPrice.compareTo(BigDecimal.ZERO) < 0)
+			throw new IllegalArgumentException("Gold price cannot be negative.");
 		
+		TreasureChest.goldPrice = goldPrice;
 		
 	}
 	
