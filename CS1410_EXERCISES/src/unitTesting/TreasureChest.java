@@ -107,6 +107,18 @@ public class TreasureChest {
 	}
 
 	/**
+	 * Updates the price of gold with the <code>goldPrice</code> provided.
+	 * <p>
+	 * @param goldPrice the gold price to set
+	 * @throws IllegalArgumentException if the <code>goldPrice</code> is negative.
+	 */
+	public static void setGoldPrice(BigDecimal goldPrice) {
+		
+		
+		
+	}
+	
+	/**
 	 * 
 	 * @return gold valueInDollars
 	 */

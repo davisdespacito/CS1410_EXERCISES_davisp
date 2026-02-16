@@ -106,6 +106,28 @@ class TreasureChestTest {
 	}
 	
 	@Test
+	void removeGold_RemovingSomeOfTheAvailableCoins_ReturnsReducedNumberOfCoinsInTreasureChest() {
+		
+		assertEquals(8, treasure.removeGold(2));
+		
+	}
+	
+	@Test
+	void removeGold_RemovingAllOfTheAvailableCoins_Returns0() {
+		
+		assertEquals(0, treasure.removeGold(10));
+		
+	}
+	
+	@Test
+	void removeGold_RemovingZeroCoins_ReturnsUnchangedNumberOfCoinsInTreasureChest() {
+		
+		assertEquals(10, treasure.removeGold(0));
+		
+	}
+
+	
+	@Test
 	void testValueInDollars() {
 		fail("Not yet implemented");
 	}
