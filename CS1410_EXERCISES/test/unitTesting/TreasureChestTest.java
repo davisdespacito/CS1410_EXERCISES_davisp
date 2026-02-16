@@ -68,10 +68,39 @@ class TreasureChestTest {
 	}
 
 	@Test
-	void testRemoveGold() {
-		fail("Not yet implemented");
+	void removeGold_RemoveingSomeOfTheAvailableCoins_REducesNumberOfCoinsInTreasureChest() {
+		fail("Not yet implemented"); //TODO
 	}
 
+	@Test
+	void remvoeGold_RemovingAllAvailableCoins_EmpiesTreasureChest() {
+		
+		fail("not yet implemented"); //TODO
+		
+	}
+	
+	@Test
+	void removeGold_RemovingZeroCoins_LeavesNumberOfCoinsInTreasureChestUnchanged() {
+		
+		//TODO
+		
+		
+	}
+	
+	@Test
+	void removeGold_RemovingMoreCoinsThanAvailable_ThrowsIllegalArgumentException() {
+		
+		assertThrows(IllegalArgumentException.class, () -> {treasure.removeGold(11);});
+		
+	}
+	
+	@Test
+	void removeGold_RemovingNegativeNumberOfCoins_ThrowsIllegalArgumentException() {
+		
+		assertThrows(IllegalArgumentException.class, () -> {treasure.removeGold(-1);});
+		
+	}
+	
 	@Test
 	void testValueInDollars() {
 		fail("Not yet implemented");

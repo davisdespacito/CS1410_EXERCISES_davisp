@@ -77,9 +77,13 @@ public class TreasureChest {
 	}
 
 	/**
-	 * 
+	 * Removes the specified number of coins from this treasure chest.
+	 * <p>			
 	 * @param numberOfCoins
-	 * @return
+	 * @return the number of gold coins left in the treasure chest
+	 * @throws IllegalArgumentException if the <code> numberOfCoins</code> is negative 
+	 * or if the <code>numberOfCoins</code> exceeds the number of gold coins in this 
+	 * treasure chest.
 	 */
 	public int removeGold(int numberOfCoins) {
 
