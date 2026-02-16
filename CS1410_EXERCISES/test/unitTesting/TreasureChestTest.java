@@ -3,6 +3,8 @@ package unitTesting;
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.math.BigDecimal;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -133,9 +135,28 @@ class TreasureChestTest {
 	}
 	
 	@Test
-	void testSetGoldPrice() {
+	void setGoldPrice_SettingPositiveValue_UpdatesGoldPrice() {
 		
-		fail("Not yet implemented");
+		TreasureChest.setGoldPrice(new BigDecimal(1376.57));
+		assertEquals(new BigDecimal(1376.57), TreasureChest.getGoldPrice());
+		
+		
+	}
+	
+	@Test
+	void setGoldPrice_Setting0_UpdatesGoldPrice() {
+		
+		TreasureChest.setGoldPrice(BigDecimal.ZERO);
+		assertEquals(BigDecimal.ZERO, TreasureChest.getGoldPrice());
+		
+		
+	}
+	
+	@Test
+	void setGoldPrice_SettingNegativeValue_ThrowsIllegalArgumentException() {
+		
+		assertThrows(IllegalArgumentException.class, () -> 
+			{TreasureChest.setGoldPrice(new BigDecimal(-0.001));});
 		
 	}
 
