@@ -122,12 +122,13 @@ public class TreasureChest {
 	}
 	
 	/**
-	 * 
+	 * Calculates the dollar value of all the gold coins in the treasure chest.
+	 * <p>
 	 * @return gold valueInDollars
 	 */
 	public BigDecimal valueInDollars() {
 
-		return null; // TODO
+		return new BigDecimal(gold).multiply(GOLD_PER_COIN).multiply(goldPrice);
 
 	}
 
