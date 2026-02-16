@@ -39,8 +39,32 @@ class TreasureChestTest {
 	}
 	
 	@Test
-	void testAddGold() {
-		fail("Not yet implemented");
+	void addGold_AddingPositiveNumberOfCoins_IncreaseNumberOfCoinsInTreasureChest() {
+		
+		treasure.addGold(5);
+		int expected = 15;
+		int actual =treasure.getGold();
+		assertEquals(expected, actual);
+		
+		
+	}
+	
+	@Test
+	void addGold_AddingZeroCoins_LeavesNumberOfCoinsInTreasureChestUnchanged() {
+		
+		treasure.addGold(0);
+		int expected = 10;
+		int actual = treasure.getGold();
+		assertEquals(expected, actual);
+		
+		
+	}
+	
+	@Test
+	void addGold_AddingNegativeCoins_ThrowsIllegalArgumentException() {
+		
+		assertThrows(IllegalArgumentException.class, () -> {treasure.addGold(-1);});
+		
 	}
 
 	@Test

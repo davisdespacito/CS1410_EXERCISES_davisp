@@ -65,6 +65,15 @@ public class TreasureChest {
 	 */
 	public void addGold(int numberOfCoins) {
 
+		if (numberOfCoins < 0) {
+			
+			throw new IllegalArgumentException("Cannot add negative coins to the"
+					+ " treasure chest.");
+			
+		}
+		
+		gold += numberOfCoins;
+		
 	}
 
 	/**
