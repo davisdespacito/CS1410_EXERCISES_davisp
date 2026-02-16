@@ -68,22 +68,26 @@ class TreasureChestTest {
 	}
 
 	@Test
-	void removeGold_RemoveingSomeOfTheAvailableCoins_REducesNumberOfCoinsInTreasureChest() {
-		fail("Not yet implemented"); //TODO
+	void removeGold_RemovingSomeOfTheAvailableCoins_ReducesNumberOfCoinsInTreasureChest() {
+
+		treasure.removeGold(2);
+		assertEquals(8, treasure.getGold());
+		
 	}
 
 	@Test
 	void remvoeGold_RemovingAllAvailableCoins_EmpiesTreasureChest() {
 		
-		fail("not yet implemented"); //TODO
+		treasure.removeGold(10);
+		assertEquals(0, treasure.getGold());
 		
 	}
 	
 	@Test
 	void removeGold_RemovingZeroCoins_LeavesNumberOfCoinsInTreasureChestUnchanged() {
 		
-		//TODO
-		
+		treasure.removeGold(0);
+		assertEquals(10, treasure.getGold());
 		
 	}
 	

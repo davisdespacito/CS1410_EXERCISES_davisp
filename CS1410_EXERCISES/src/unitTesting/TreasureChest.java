@@ -69,7 +69,6 @@ public class TreasureChest {
 			
 			throw new IllegalArgumentException("Cannot add negative coins to the"
 					+ " treasure chest.");
-			
 		}
 		
 		gold += numberOfCoins;
@@ -87,10 +86,16 @@ public class TreasureChest {
 	 */
 	public int removeGold(int numberOfCoins) {
 
-		return 0; // TODO
+		if (numberOfCoins > this.gold || numberOfCoins < 0)
+			throw new IllegalArgumentException("Removing negative coins is not allowed, neither"
+					+ " is removing more than are in the chest.");
+		
+		this.gold -= numberOfCoins;
+		return this.gold;
 
 	}
-
+	
+	
 	/**
 	 * 
 	 * @return the goldPrice
